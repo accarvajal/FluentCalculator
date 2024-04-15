@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FluentCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39f580fda6e4475fd502a6645d6091ead1732992")]
 [assembly: System.Reflection.AssemblyProductAttribute("FluentCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FluentCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
