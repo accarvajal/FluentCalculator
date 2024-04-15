@@ -20,7 +20,7 @@ public class FluentCalculator(double initValue)
 
     public FluentCalculator Power(double value) => ApplyOperation((resultValue) => Math.Pow(resultValue, value));
 
-    public FluentCalculator ApplyOperation(Func<double, double> operation)
+    private FluentCalculator ApplyOperation(Func<double, double> operation)
     {
         Result = operation(Result);
         return this;
