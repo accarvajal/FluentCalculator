@@ -26,3 +26,33 @@ public class FluentCalculator(double initValue)
         return this;
     }
 }
+
+
+// Otra forma:
+
+public class FluentCalculator2
+{
+    private decimal _result;
+
+    public FluentCalculator2(decimal initialValue)
+    {
+        _result = initialValue;
+    }
+
+    private FluentCalculator2 Calculate(Func<decimal, decimal, decimal> operation, decimal value)
+    {
+        _result = operation(_result, value);
+        return this;
+    }
+
+    public Func<decimal, FluentCalculator2> Add => value => Calculate((a, b) => a + b, value);
+    public Func<decimal, FluentCalculator2> Subtract => value => Calculate((a, b) => a - b, value);
+    public Func<decimal, FluentCalculator2> Multiply => value => Calculate((a, b) => a * b, value);
+    public Func<decimal, FluentCalculator2> Divide => value => Calculate((a, b) => a / b, value);
+    public Func<int, FluentCalculator2> Power => exponent => { _result = (decimal)Math.Pow((double)_result, exponent); return this; };
+
+    public decimal Result
+    {
+        get { return _result; }
+    }
+}
